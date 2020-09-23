@@ -1,6 +1,8 @@
 import { db } from '../models/index.js';
 import { logger } from '../config/logger.js';
-import { gradeModel } from '../models/gradeModel.js';
+// import { gradeModel } from '../models/gradeModel.js';
+
+const gradeModel = db.grade;  //recebe o modelo de dados
 
 const create = async (req, res) => {
   try {
