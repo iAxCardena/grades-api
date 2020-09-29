@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { gradeRouter } from './routes/gradeRouter.js';
 import { db } from './models/index.js';
-console.log("app.js");
 
 (async () => {
   try {

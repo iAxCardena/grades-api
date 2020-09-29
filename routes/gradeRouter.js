@@ -1,7 +1,6 @@
 import express from 'express';
 import controller from '../controllers/gradeController.js';
 
-console.log("gradeRouter");
 const app = express();
 
 app.post('/grade/', controller.create);
