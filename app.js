@@ -28,7 +28,7 @@ app.use(
   })
 );
 
-app.use('/grade', gradeRouter);
+app.use(gradeRouter);
 
 app.get('/', (req, res) => {
   res.send('API em execucao');
