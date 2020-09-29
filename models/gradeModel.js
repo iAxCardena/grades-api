@@ -25,7 +25,7 @@ export default (mongoose) => {
         }
     });
 
-    gradeSchema.method('toJSON', function () {      //metodo de tratamento do objeto retornado
+    Schema.method('toJSON', function () {      //metodo de tratamento do objeto retornado
         const {__v, _id, ...object} = this.toObject();
 
         object.id = _id;
