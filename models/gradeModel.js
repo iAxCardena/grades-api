@@ -1,3 +1,5 @@
+import { Schema } from "mongoose";
+
 export default (mongoose) => {
     const gradeSchema = mongoose.Schema({
         name: {
@@ -22,6 +24,15 @@ export default (mongoose) => {
             default: Date.now
         }
     });
+
+    gradeSchema.method('toJSON', function () {      //metodo de tratamento do objeto retornado
+        const {__v, _id, ...object} = this.toObject();
+
+        object.id = _id;
+
+        return object;
+    })
+
     const gradeModel = mongoose.model('student', gradeSchema, 'student');
     
     return gradeModel;
